@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DataBaseEditaleDashboardStorage.cs](./CS/DataBaseEditaleDashboardStorage.cs) (VB: [DataBaseEditaleDashboardStorage.vb](./VB/DataBaseEditaleDashboardStorage.vb))
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
+* [Global.asax](./CS/Global.asax) (VB: [Global.asax.vb](./VB/Global.asax.vb))
+* [Global.asax.cs](./CS/Global.asax.cs) (VB: [Global.asax.vb](./VB/Global.asax.vb))
+<!-- default file list end -->
 #  ASPxDashboard - How to save dashboards to a database
 
 
