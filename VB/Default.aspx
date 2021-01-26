@@ -1,19 +1,27 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="true" CodeFile="Default.aspx.vb" Inherits="Default" %>
 
-<%@ Register assembly="DevExpress.Dashboard.v16.2.Web, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.DashboardWeb" tagprefix="dx" %>
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
 	<title></title>
+
+	<style type="text/css">
+		html, body, form {  
+			height: 100%;  
+			margin: 0;  
+			padding: 0;  
+			overflow: hidden;  
+		}
+	</style>
 </head>
 <body>
 	<form id="form1" runat="server">
-	<dx:ASPxDashboard ID="ASPxWebDashboard1" runat="server" 
-					IncludeDashboardIdToUrl = "True"
-					IncludeDashboardStateToUrl = "True" Height="800px" UseDashboardConfigurator="True">
-			</dx:ASPxDashboard>
+		<dx:ASPxDashboard ID="ASPxWebDashboard1" runat="server" Height="100%"
+			IncludeDashboardIdToUrl="True"
+			IncludeDashboardStateToUrl="True" 
+			UseDashboardConfigurator="True">
+		</dx:ASPxDashboard>
 	</form>
 </body>
 </html>

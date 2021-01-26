@@ -1,13 +1,6 @@
-﻿Imports Microsoft.VisualBasic
-Imports DevExpress.DashboardWeb
-Imports System
-Imports System.Collections.Generic
-Imports System.Data
+﻿Imports System.IO
 Imports System.Data.SqlClient
-Imports System.IO
-Imports System.Linq
-Imports System.Text
-Imports System.Xml.Linq
+Imports DevExpress.DashboardWeb
 
 Namespace T386418
 	Public Class DataBaseEditaleDashboardStorage
@@ -16,11 +9,10 @@ Namespace T386418
 		Private connectionString As String
 
 		Public Sub New(ByVal connectionString As String)
-			MyBase.New()
 			Me.connectionString = connectionString
 		End Sub
 
-		Private Function AddDashboard(ByVal document As XDocument, ByVal dashboardName As String) As String Implements IEditableDashboardStorage.AddDashboard
+		Public Function AddDashboard(ByVal document As XDocument, ByVal dashboardName As String) As String Implements IEditableDashboardStorage.AddDashboard
 			Using connection As New SqlConnection(connectionString)
 				connection.Open()
 				Dim stream As New MemoryStream()
@@ -37,8 +29,7 @@ Namespace T386418
 			End Using
 		End Function
 
-
-		Private Function LoadDashboard(ByVal dashboardID As String) As XDocument Implements IDashboardStorage.LoadDashboard
+		Public Function LoadDashboard(ByVal dashboardID As String) As XDocument Implements DevExpress.DashboardWeb.IDashboardStorage.LoadDashboard
 			Using connection As New SqlConnection(connectionString)
 				connection.Open()
 				Dim GetCommand As New SqlCommand("SELECT  Dashboard FROM Dashboards WHERE ID=@ID")
@@ -53,8 +44,7 @@ Namespace T386418
 			End Using
 		End Function
 
-		Private Function GetAvailableDashboardsInfo() As IEnumerable(Of DashboardInfo) Implements IDashboardStorage.GetAvailableDashboardsInfo
-
+		Public Function GetAvailableDashboardsInfo() As IEnumerable(Of DashboardInfo) Implements DevExpress.DashboardWeb.IDashboardStorage.GetAvailableDashboardsInfo
 			Dim list As New List(Of DashboardInfo)()
 			Using connection As New SqlConnection(connectionString)
 				connection.Open()
@@ -71,7 +61,7 @@ Namespace T386418
 			Return list
 		End Function
 
-		Private Sub SaveDashboard(ByVal dashboardID As String, ByVal document As XDocument) Implements IDashboardStorage.SaveDashboard
+		Public Sub SaveDashboard(ByVal dashboardID As String, ByVal document As XDocument) Implements DevExpress.DashboardWeb.IDashboardStorage.SaveDashboard
 			Using connection As New SqlConnection(connectionString)
 				connection.Open()
 				Dim stream As New MemoryStream()
@@ -86,9 +76,6 @@ Namespace T386418
 
 				connection.Close()
 			End Using
-
 		End Sub
-
 	End Class
-
 End Namespace
