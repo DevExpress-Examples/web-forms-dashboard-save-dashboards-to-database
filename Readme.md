@@ -19,7 +19,7 @@ The example uses the [System.Data.SqlClient](https://docs.microsoft.com/en-us/
 
 A custom dashboard storage should implement one of the following interfaces: [IDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage) or [IEditableDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IEditableDashboardStorage).
 
-The following API used in the example:
+The following API is used in the example:
 
 - [LoadDashboard](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage.LoadDashboard(System.String)) 
 
@@ -32,7 +32,7 @@ The following API used in the example:
     Updates the dashboard with new settings by its id.
 - [AddDashboard](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IEditableDashboardStorage.AddDashboard(System.Xml.Linq.XDocument-System.String)) 
 
-   Takes a dashboard definition with its caption, saves it to the data storage, and returns the ID of a new saved dashboard.
+   Saves a dashboard definition and its caption to the data storage and returns the ID of the new saved dashboard.
   
 Additionally, this example contains an SQL file ([SavedDashboards.sql](./CS/SavedDashboards.sql)), which can be used to recreate a database used in this example on your side. Do no forget to update the connection string in the **Web.config** file to make it valid in your environment.
 
