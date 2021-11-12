@@ -23,7 +23,7 @@ The following API is used in the example:
 
 - [LoadDashboard](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage.LoadDashboard(System.String)) 
 
-    Returns a dashboard by its ID in the XDocument format, which describes an object model of the dashboard.
+    Loads a dashboard with the specified ID in XDocument format from storage.
 - [GetAvailableDashboardsInfo](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage.GetAvailableDashboardsInfo) 
 
     Returns a list of IDs and Captions of dashboards available in the data storage.
