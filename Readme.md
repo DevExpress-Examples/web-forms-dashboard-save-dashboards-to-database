@@ -4,7 +4,7 @@
 <!-- default badges end -->
 #  Dashboard for Web Forms - How to Load and Save Dashboards from/to a Database
 
-This example shows how to create a custom dashboard storage that allows you to store dashboards in a database.
+This example shows how to create a custom dashboard storage to load and save dashboards in a database.
 
 <!-- default file list -->
 ## Files to Look At
@@ -15,7 +15,7 @@ This example shows how to create a custom dashboard storage that allows you to s
 
 ## Example Overview
 
-The example uses the [System.Data.SqlClient](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN&view=net-5.0) members to connect and operate an MS SQL server database.
+The example uses the [System.Data.SqlClient](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN&view=net-5.0) members to connect and manage an MS SQL server database.
 
 A custom dashboard storage should implement one of the following interfaces: [IDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage) or [IEditableDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IEditableDashboardStorage).
 
@@ -29,12 +29,12 @@ The following API is used in the example:
     Returns a list of IDs and Captions of dashboards available in the data storage.
 - [SaveDashboard](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage.SaveDashboard(System.String-System.Xml.Linq.XDocument)) 
 
-    Updates the dashboard with new settings by its id.
+    Saves the specified dashboard with new settings to the dashboard storage.
 - [AddDashboard](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IEditableDashboardStorage.AddDashboard(System.Xml.Linq.XDocument-System.String)) 
 
    Saves a dashboard definition and its caption to the data storage and returns the ID of the new saved dashboard.
   
-Additionally, this example contains an SQL file ([SavedDashboards.sql](./CS/SavedDashboards.sql)), which can be used to recreate a database used in this example on your side. Do no forget to update the connection string in the **Web.config** file to make it valid in your environment.
+Additionally, this example contains an SQL file ([SavedDashboards.sql](./CS/SavedDashboards.sql)) that can be used to recreate a database used in this example. Update the connection string in the **Web.config** file to make it valid in your environment.
 
 
 ## Documentation
