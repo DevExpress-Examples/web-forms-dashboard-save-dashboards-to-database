@@ -36,7 +36,6 @@ The following API is used in the example:
   
 Additionally, this example contains an SQL file ([SavedDashboards.sql](./CS/SavedDashboards.sql)) that can be used to recreate a database used in this example. Update the connection string in the **Web.config** file to make it valid in your environment.
 
-
 ## Documentation
   
 * [Prepare Dashboard Storage](https://docs.devexpress.com/Dashboard/16979/web-dashboard/dashboard-backend/prepare-dashboard-storage)
