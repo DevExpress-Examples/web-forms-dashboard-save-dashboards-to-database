@@ -11,7 +11,7 @@ This example shows how to create a custom dashboard storage to load and save das
 <!-- default file list -->
 ## Files to Look At
 
-* [DatabaseEditableDashboardStorage.cs](./CS/DatabaseEditabeDashboardStorage.cs) (VB: [DatabaseEditabeDashboardStorage.vb](./VB/DatabaseEditabeDashboardStorage.vb))
+* [DatabaseEditableDashboardStorage.cs](./CS/DatabaseEditableDashboardStorage.cs) (VB: [DatabaseEditableDashboardStorage.vb](./VB/DatabaseEditableDashboardStorage.vb))
 * [Global.asax.cs](./CS/Global.asax.cs) (VB: [Global.asax.vb](./VB/Global.asax.vb))
 <!-- default file list end -->
 
