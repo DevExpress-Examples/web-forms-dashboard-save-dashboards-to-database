@@ -147,7 +147,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataBaseEditaleDashboardStorage.vb" />
+    <Compile Include="DatabaseEditableDashboardStorage.vb" />
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

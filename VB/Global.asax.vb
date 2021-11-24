@@ -14,7 +14,7 @@ Imports T386418
 Partial Public Class [Global]
 	Inherits System.Web.HttpApplication
 	Protected Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
-		Dim dataBaseDashboardStorage As New DataBaseEditaleDashboardStorage(ConfigurationManager. ConnectionStrings("DashboardStorageConnection").ConnectionString)
+		Dim dataBaseDashboardStorage As New DatabaseEditableDashboardStorage(ConfigurationManager. ConnectionStrings("DashboardStorageConnection").ConnectionString)
 
 		DashboardConfigurator.Default.SetDashboardStorage(dataBaseDashboardStorage)
 

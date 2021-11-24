@@ -150,7 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SalesPersonData.cs" />
-    <Compile Include="DataBaseEditaleDashboardStorage.cs" />
+    <Compile Include="DatabaseEditableDashboardStorage.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

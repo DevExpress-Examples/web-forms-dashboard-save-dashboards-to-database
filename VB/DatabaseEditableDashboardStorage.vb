@@ -10,7 +10,7 @@ Imports System.Text
 Imports System.Xml.Linq
 
 Namespace T386418
-	Public Class DataBaseEditaleDashboardStorage
+	Public Class DatabaseEditableDashboardStorage
 		Implements IEditableDashboardStorage
 
 		Private connectionString As String

@@ -7,10 +7,10 @@ using System.IO;
 using System.Xml.Linq;
 
 namespace T386418 {
-    public class DataBaseEditaleDashboardStorage : IEditableDashboardStorage {
+    public class DatabaseEditableDashboardStorage : IEditableDashboardStorage {
         private string connectionString;
 
-        public DataBaseEditaleDashboardStorage(string connectionString)
+        public DatabaseEditableDashboardStorage(string connectionString)
             : base() {
             this.connectionString = connectionString;
         }
