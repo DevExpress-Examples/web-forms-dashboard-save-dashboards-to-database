@@ -6,20 +6,12 @@
 
 #  Dashboard for Web Forms - How to Load and Save Dashboards from/to a Database
 
-This example shows how to create a custom dashboard storage to load and save dashboards in a database.
-
-<!-- default file list -->
-## Files to Look At
-
-* [DatabaseEditableDashboardStorage.cs](./CS/DatabaseEditableDashboardStorage.cs) (VB: [DatabaseEditableDashboardStorage.vb](./VB/DatabaseEditableDashboardStorage.vb))
-* [Global.asax.cs](./CS/Global.asax.cs) (VB: [Global.asax.vb](./VB/Global.asax.vb))
-<!-- default file list end -->
-
-## Example Overview
+This example shows how to create custom dashboard storage in an ASP.NET Web Forms application and to store dashboards in a database.
+To create custom dashboard storage, implement [IDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage?p=netframework) or [IEditableDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IEditableDashboardStorage).
 
 The example uses the [System.Data.SqlClient](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN&view=net-5.0) members to connect and manage an MS SQL server database.
 
-A custom dashboard storage should implement one of the following interfaces: [IDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IDashboardStorage) or [IEditableDashboardStorage](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.IEditableDashboardStorage).
+This example also contains an SQL file ([SavedDashboards.sql](./CS/SaveDashboardDB/SavedDashboards.sql)). You can use it to recreate a database on your side. Do not forget to update the connection string in the **Web.config** file to make it valid in your environment.
 
 The following API is used in the example:
 
@@ -36,7 +28,10 @@ The following API is used in the example:
 
    Saves a dashboard definition and its caption to the data storage and returns the ID of the new saved dashboard.
   
-Additionally, this example contains an SQL file ([SavedDashboards.sql](./CS/SavedDashboards.sql)) that can be used to recreate a database used in this example. Update the connection string in the **Web.config** file to make it valid in your environment.
+## Files to Review
+
+* [DatabaseEditableDashboardStorage.cs](./CS/DatabaseEditableDashboardStorage.cs) (VB: [DatabaseEditableDashboardStorage.vb](./VB/DatabaseEditableDashboardStorage.vb))
+* [Global.asax.cs](./CS/Global.asax.cs) (VB: [Global.asax.vb](./VB/Global.asax.vb))
 
 ## Documentation
   
