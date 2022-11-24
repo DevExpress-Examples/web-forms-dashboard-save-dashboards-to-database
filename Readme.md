@@ -11,7 +11,7 @@ To create custom dashboard storage, implement [IDashboardStorage](https://docs.d
 
 The example uses the [System.Data.SqlClient](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient?redirectedfrom=MSDN&view=net-5.0) members to connect and manage an MS SQL server database.
 
-This example also contains an SQL file ([SavedDashboards.sql](./CS/SaveDashboardDB/SavedDashboards.sql)). You can use it to recreate a database on your side. Do not forget to update the connection string in the **Web.config** file to make it valid in your environment.
+This example also contains an SQL file ([SavedDashboards.sql](./CS/SavedDashboards.sql)). You can use it to recreate a database on your side. Do not forget to update the connection string in the **Web.config** file to make it valid in your environment.
 
 The following API is used in the example:
 
