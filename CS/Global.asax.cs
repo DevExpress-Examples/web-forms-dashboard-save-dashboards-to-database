@@ -3,9 +3,11 @@ using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
 using System.Configuration;
 using T386418;
+using DevExpress.Utils;
 
 public partial class Global : System.Web.HttpApplication {
     protected void Application_Start(object sender, EventArgs e) {
+        DeserializationSettings.RegisterTrustedClass(typeof(SalesPersonData));
         var dataBaseDashboardStorage = new DatabaseEditableDashboardStorage(
             ConfigurationManager.ConnectionStrings["DashboardStorageConnection"].ConnectionString);
         DashboardConfigurator.Default.SetDashboardStorage(dataBaseDashboardStorage);
